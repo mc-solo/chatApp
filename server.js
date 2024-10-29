@@ -63,7 +63,7 @@ io.on("connection", (socket) => {
     io.to(user.room).emit("message", formatMessage(user.username, msg));
   });
 
-  // Runs when client disconnects
+  // Run when client disconnects
   socket.on("disconnect", () => {
     const user = userLeave(socket.id);
 
